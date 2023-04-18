@@ -1,5 +1,9 @@
 pipeline {
-	agent none
+	agent any{
+        
+        tools { 
+        maven 'Maven'
+        }
   stages {
   	stage('Maven Install') {
     	agent {
@@ -12,4 +16,5 @@ pipeline {
       }
     }
   }
+}
 }
